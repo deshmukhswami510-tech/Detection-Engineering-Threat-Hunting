@@ -1,0 +1,22 @@
+Technique ID,Technique Name,Tactic,Related Sigma Rule,Coverage
+T1110.001,Password Guessing,Credential Access,windows_brute_force_correlation.yml,Partial
+T1110.003,Password Spraying,Credential Access,windows_brute_force_correlation.yml,Partial
+T1110.004,Credential Stuffing,Credential Access,windows_brute_force_correlation.yml,Partial
+T1059.001,PowerShell,Execution,windows_powershell_encoded.yml,Partial
+T1027,Obfuscated Files or Information,Defense Evasion,windows_powershell_encoded.yml,Partial
+T1059.003,Windows Command Shell,Execution,windows_multiple_failed_processes.yml,Partial
+T1059.005,Visual Basic,Execution,windows_multiple_failed_processes.yml,Partial
+T1059.007,JavaScript,Execution,windows_multiple_failed_processes.yml,Partial
+T1562.001,Disable or Modify Tools,Defense Evasion,windows_disabled_defender.yml,Partial
+T1053.005,Scheduled Task,Persistence,windows_suspicious_scheduled_task.yml,Partial
+T1021.001,Remote Desktop Protocol,Lateral Movement,windows_rdp_connection.yml,Partial
+T1136.001,Local Account,Persistence,windows_account_created.yml,Partial
+T1098,Account Manipulation,Persistence,windows_account_created.yml,Partial
+T1078,Valid Accounts,Defense Evasion,windows_rdp_connection.yml,Partial
+T1562.004,Disable or Modify System Firewall,Defense Evasion,windows_firewall_disabled.yml,Partial
+T1543.003,Windows Service,Persistence,windows_service_installation.yml,Partial
+T1021.002,SMB/Windows Admin Shares,Lateral Movement,windows_suspicious_psexec.yml,Partial
+T1569.002,Service Execution,Execution,windows_suspicious_psexec.yml,Partial
+T1070.001,Clear Windows Event Logs,Defense Evasion,windows_clear_event_logs.yml,Partial
+T1218.011,Rundll32,System Binary Proxy Execution,windows_suspicious_rundll32.yml,Partial
+T1548.002,Bypass User Account Control,Privilege Escalation,windows_uac_bypass.yml,Partial

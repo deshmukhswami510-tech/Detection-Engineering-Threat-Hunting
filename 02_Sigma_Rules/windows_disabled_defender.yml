@@ -1,0 +1,16 @@
+title: Windows Defender Disabled
+id: 8b7a2f31-0005-4c1a-9f10-000000000005
+status: experimental
+description: Detects changes that disable Windows Defender real-time protection.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  category: registry_set
+detection:
+  selection:
+    TargetObject|contains: 'Windows Defender\Real-Time Protection'
+  condition: selection
+falsepositives:
+  - Authorized security configuration changes
+level: high

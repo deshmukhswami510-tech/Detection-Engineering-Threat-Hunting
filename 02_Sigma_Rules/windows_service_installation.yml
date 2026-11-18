@@ -1,0 +1,16 @@
+title: Suspicious Windows Service Installation
+id: 8b7a2f31-0012-4c1a-9f10-000000000012
+status: experimental
+description: Detects installation of a new Windows service.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: system
+detection:
+  selection:
+    EventID: 7045
+  condition: selection
+falsepositives:
+  - Legitimate software or driver installation
+level: medium

@@ -1,0 +1,16 @@
+title: Suspicious Rundll32 Execution
+id: 8b7a2f31-0015-4c1a-9f10-000000000015
+status: experimental
+description: Detects rundll32.exe execution that may indicate suspicious DLL execution.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image|endswith: '\rundll32.exe'
+  condition: selection
+falsepositives:
+  - Legitimate Windows system activity
+level: medium

@@ -1,0 +1,17 @@
+title: Windows Remote Desktop Connection
+id: 8b7a2f31-0007-4c1a-9f10-000000000007
+status: experimental
+description: Detects successful Remote Desktop login events.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 10
+  condition: selection
+falsepositives:
+  - Authorized remote desktop access
+level: low

@@ -1,0 +1,16 @@
+title: Suspicious Scheduled Task Creation
+id: 8b7a2f31-0006-4c1a-9f10-000000000006
+status: experimental
+description: Detects scheduled task creation that may indicate persistence.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+  condition: selection
+falsepositives:
+  - Legitimate scheduled task creation
+level: medium

@@ -1,0 +1,22 @@
+
+title: Multiple Failed Windows Logins
+id: 8b7a2f31-0001-4c1a-9f10-000000000001
+name: windows_brute_force
+status: experimental
+description: Detects multiple failed Windows login attempts that may indicate a brute-force attack.
+author: Swami Pravin Deshmukh
+date: 2026-11-17
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+fields:
+  - EventID
+  - AccountName
+  - SourceIP
+falsepositives:
+  - Users entering incorrect passwords repeatedly
+level: medium

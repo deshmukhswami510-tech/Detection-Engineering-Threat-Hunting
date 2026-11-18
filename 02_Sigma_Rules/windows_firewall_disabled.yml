@@ -1,0 +1,16 @@
+title: Windows Firewall Disabled
+id: 8b7a2f31-0010-4c1a-9f10-000000000010
+status: experimental
+description: Detects Windows Firewall being disabled.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5025
+  condition: selection
+falsepositives:
+  - Authorized firewall configuration changes
+level: high

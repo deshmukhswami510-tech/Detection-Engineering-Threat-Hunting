@@ -1,0 +1,16 @@
+title: Windows Antivirus Threat Detection
+id: 8b7a2f31-0011-4c1a-9f10-000000000011
+status: experimental
+description: Detects malware detection events reported by Windows Defender.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: windefend
+detection:
+  selection:
+    EventID: 1116
+  condition: selection
+falsepositives:
+  - False positive antivirus detections
+level: high

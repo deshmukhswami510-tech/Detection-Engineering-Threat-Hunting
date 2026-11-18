@@ -1,0 +1,16 @@
+title: Windows User Account Created
+id: 8b7a2f31-0008-4c1a-9f10-000000000008
+status: experimental
+description: Detects creation of a new Windows user account.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4720
+  condition: selection
+falsepositives:
+  - Authorized user account creation
+level: medium

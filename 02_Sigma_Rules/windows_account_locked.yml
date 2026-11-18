@@ -1,0 +1,16 @@
+title: Windows Account Locked
+id: 8b7a2f31-0009-4c1a-9f10-000000000009
+status: experimental
+description: Detects Windows account lockout events.
+author: Swami Pravin Deshmukh
+date: 2026-11-18
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4740
+  condition: selection
+falsepositives:
+  - Normal account lockout after incorrect password attempts
+level: medium
